@@ -8,16 +8,18 @@
     <style>
         body {
             background-color: #444;
+            animation: sky 5s linear infinite;
         }
 
         .sun {
             position: fixed;
-            bottom: 15%;
+            bottom: 5%;
             left: 10%;
             width: 15vw;
             height: 15vw;
             background-color: darkred;
             border-radius: 50%;
+            animation: sun 5s linear infinite;
         }
 
         .grass {
@@ -27,6 +29,73 @@
             bottom: 0;
             height: 30vh;
             background-color: darkgreen;
+            animation: grass 5s linear infinite;
+
+        }
+
+        @keyframes sky {
+            0% {
+                background-color: #444;
+            }
+
+            30% {
+                background-color: rgb(112, 94, 97);
+            }
+
+            50% {
+                background-color: lightblue;
+            }
+
+            70% {
+                background-color: rgb(112, 94, 97);
+            }
+
+            100% {
+                background-color: #444;
+
+            }
+        }
+
+        @keyframes grass {
+            0% {
+                background-color: #222;
+            }
+
+            20% {
+                background-color: green;
+            }
+
+            50% {
+                background-color: greenyellow;
+            }
+
+            80% {
+                background-color: green
+            }
+
+            100% {
+                background-color: #222;
+
+            }
+        }
+
+        @keyframes sun {
+            0% {
+                bottom: 0%;
+                left: 0%;
+                background-color: darkred;
+            }
+
+            50% {
+                bottom: 45%;
+                background-color: yellow;
+            }
+
+            100% {
+                bottom: -5%;
+                left: 90%;
+                background-color: darkred;
+            }
         }
     </style>
 </head>
